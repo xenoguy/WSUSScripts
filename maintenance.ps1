@@ -3,6 +3,8 @@ param (
     [switch]$replica # -replica - indicates the script is being run on a replica of an upstream WSUS server, doesn't decline updates.
 )
 
+cd $PSScriptRoot
+
 # include the PS function to run sql commands
 # you can also run the individual sql commands with sql server management studio, or the sql command line tools (sqlcmd).
 function execute-sqlcmd ($sqlquery) {
